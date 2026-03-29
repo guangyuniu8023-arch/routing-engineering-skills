@@ -1,0 +1,17 @@
+{
+  "name": "routing-quality",
+  "version": "1.0.0",
+  "description": "TDD-based routing quality engineering methodology for LLM-powered skill routing systems. Systematic 4-layer approach: golden cases, ambiguity resolution, boundary arbitration, and integration testing.",
+  "author": {
+    "name": "bytedance"
+  },
+  "license": "MIT",
+  "keywords": [
+    "routing",
+    "quality-engineering",
+    "tdd",
+    "llm",
+    "skill-routing",
+    "planner"
+  ]
+}

@@ -1,7 +1,7 @@
 {
-  "name": "routing-quality",
+  "name": "routing-engineering",
   "version": "1.0.0",
-  "description": "TDD-based routing quality engineering methodology for LLM-powered skill routing systems. Systematic 4-layer approach: golden cases, ambiguity resolution, boundary arbitration, and integration testing.",
+  "description": "End-to-end routing engineering for LLM-powered skill routing systems. Front half: scaffold Agent architecture + per-skill build. Back half: TDD-based 4-layer quality improvement.",
   "author": {
     "name": "bytedance"
   },

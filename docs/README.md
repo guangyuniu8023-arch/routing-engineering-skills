@@ -1,6 +1,6 @@
-# Routing Quality Engineering
+# Routing Engineering
 
-Planner+Skill 路由系统的质量工程方法论。包含主动构建和被动修复两套互补流程。
+Planner+Skill 路由系统的质量工程方法论。包含前半段构建（Setup）、后半段调优（Building）和被动修复（Fixing）三套互补流程。
 
 ---
 
@@ -8,9 +8,32 @@ Planner+Skill 路由系统的质量工程方法论。包含主动构建和被动
 
 | 场景 | 使用 | 文档 |
 |------|------|------|
+| 从零构建 Agent 骨架 | /routing-setup | [routing-setup.md](routing-setup.md) |
+| 逐 skill 填充并生成衔接配置 | /routing-skill-build | [routing-skill-build.md](routing-skill-build.md) |
 | 首次接入 / 项目结构变化 | Phase 0 发现 | [phase0-discovery.md](phase0-discovery.md) |
 | 系统性提升路由准确率 | Building（Layer 1→4） | 见下方 |
 | 单个路由 bug 快速修复 | Fixing | [fixing-routing.md](fixing-routing.md) |
+
+**从哪里开始？**
+
+- 全新项目，无 Agent 骨架 → 从 `/routing-setup` 开始
+- 前半段已完成（有 config + test 文件）→ 直接从 Layer 1 开始
+- 已有 Agent 骨架但没跑过路由质量 → 从 Phase 0 开始
+
+---
+
+## Setup: 从零构建
+
+前半段负责搭建骨架和填充 skill，产出可直接衔接后半段：
+
+```
+/routing-setup → /routing-skill-build → Phase 0 → Layer 1 → ... → Layer 4
+  骨架搭建        逐skill填充            发现       锁核心         全量验证
+```
+
+- **`/routing-setup`**：Phase A 需求收集 + Phase B 骨架搭建（9 项架构约束）
+- **`/routing-skill-build`**：Phase C 逐 skill 循环 + Phase D 闭合衔接
+- 产出 `.routing-quality/config.md` + `tests/routing_test_{N}skills.py`，直接进入 Layer 1
 
 ---
 
